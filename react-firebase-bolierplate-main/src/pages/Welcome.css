@@ -1,0 +1,123 @@
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.welcome-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('https://img.freepik.com/free-photo/shop-clothing-clothes-shop-hanger-modern-shop-boutique_1150-8886.jpg?semt=ais_hybrid&w=740');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+.welcome-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 2s ease forwards;
+}
+
+
+.welcome-button {
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #00b894);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+.welcome-button:hover {
+  background: linear-gradient(135deg, #b71b51, #1b1485, #74b9ff);
+  color: whitesmoke;
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #f9d423;
+}
+
+
+.welcome-login-link {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  
+  cursor: pointer;
+  transition: color 0.3s, text-shadow 0.3s;
+  animation: fadeIn 3s ease forwards;
+}
+
+.welcome-login-link:hover {
+  color: white;
+  text-decoration: underline;
+  text-shadow: 0 0 10px #1457bb;
+}
+
+
+@keyframes floatText {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 78, 80, 0.7);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(255, 78, 80, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 78, 80, 0.0);
+  }
+}
